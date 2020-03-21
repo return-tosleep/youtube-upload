@@ -105,7 +105,7 @@ def upload_youtube_video(youtube, options, video_path, total_videos, index):
     u = lib.to_utf8
     title = u(options.title)
     if hasattr(u('string'), 'decode'):
-        description = u(options.description or "").decode("string-escape")
+        description = u(options.description or "")
     else:
         description = options.description
     if options.publish_at:
